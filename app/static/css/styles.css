@@ -1,0 +1,39 @@
+nav {
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: white;
+  background-color: black;
+}
+
+.forms {
+  text-align: center;
+  width: 100px;
+  margin: 0px auto;
+}
+
+form {
+  margin: 0px auto;
+  text-align: left;
+}
+
+input {
+ display: inline-block;
+ margin-left: 5px;
+}
+

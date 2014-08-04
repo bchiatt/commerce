@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title
+    link(rel="stylesheet", href="/css/styles.css")
+  body
+    nav
+      ul
+        li: a(href="/") Home
+        li: a(href="/about") About
+        li: a(href="/faq") FAQ
+        li: a(href="/items/new") Add Item
+        
+    each item in items 
+      div= item.name
+      div= item.dimensions.l
+      div= item.dimensions.w
+      div= item.dimensions.h
+      div= item.weight
+      div= item.color
+      div= item.quantity
+      div= item.msrp
+      div= item.percentOff
+      div= item.cost()
+      hr
