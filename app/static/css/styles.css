@@ -21,6 +21,10 @@ a:hover, a:active {
   background-color: black;
 }
 
+h1 {
+  text-align: center;
+}
+
 .forms {
   text-align: center;
   width: 100px;
