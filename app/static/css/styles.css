@@ -16,7 +16,7 @@ a {
   color: black;
 }
 
-a:hover {
+a:hover, a:active {
   color: white;
   background-color: black;
 }
@@ -37,3 +37,17 @@ input {
  margin-left: 5px;
 }
 
+table {
+  position: relative;
+  margin: auto;
+}
+
+td {
+  width: 75px;
+  height: 30px;
+  padding: 5px;
+}
+
+td a {
+  color: gray;
+}

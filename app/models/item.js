@@ -1,5 +1,6 @@
 'use strict';
 
+var Mongo = require('mongodb');
 var _ = require('lodash');
 
 function Item(o){
@@ -37,17 +38,17 @@ Item.all = function(cb){
   });
 };
 
-Item.findByID = function(query, cb){
-  query = {_id:query};
-  Item.collection.findOne(query, function(err, item){
+Item.findByID = function(id, cb){
+  var _id = Mongo.ObjectID(id);
+  Item.collection.findOne({_id:_id}, function(err, item){
     item = _.create(Item.prototype, item);
     cb(item);
   });
 };
 
-Item.deleteByID = function(query, cb){
-  query = {_id:query};
-  Item.collection.remove(query, function(){
+Item.deleteByID = function(id, cb){
+  var _id = Mongo.ObjectID(id);
+  Item.collection.remove({_id:_id}, function(){
     cb();
   });
 };
