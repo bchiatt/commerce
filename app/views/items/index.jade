@@ -1,38 +1,30 @@
-doctype html
-html
-  head
-    title
-    link(rel="stylesheet", href="/css/styles.css")
-  body
-    nav
-      ul
-        li: a(href="/") Home
-        li: a(href="/about") About
-        li: a(href="/faq") FAQ
-        li: a(href="/items/new") Add Item
-        li: a(href="/items") List All Items
-    div
-      table(style='border-collapse: collapse')
-        thead
-          tr(style='background: gray; color: white')
-            td Name
-            td Length
-            td Width
-            td Height
-            td Weight
-            td Quantity
-            td MSRP
-            td Percent Off
-            td Actual Cost
-        tbody
-          each item in items 
-            tr(style='background: #{item.color}; color: gray')
-              td: a(href='/items/#{item._id}') #{item.name}
-              td= item.dimensions.l
-              td= item.dimensions.w
-              td= item.dimensions.h
-              td= item.weight
-              td= item.quantity
-              td $ #{item.msrp}
-              td #{item.percentOff}%
-              td $ #{parseFloat(item.cost()).toFixed(2)}
+extends ../shared/template
+
+block content
+  h2 Items
+
+  div
+    table(style='border-collapse: collapse')
+      thead
+        tr(style='background: gray; color: white')
+          td Name
+          td Length
+          td Width
+          td Height
+          td Weight
+          td Quantity
+          td MSRP
+          td Percent Off
+          td Actual Cost
+      tbody
+        each item in items 
+          tr(style='background: #{item.color}; color: gray')
+            td: a(href='/items/#{item._id}') #{item.name}
+            td= item.dimensions.l
+            td= item.dimensions.w
+            td= item.dimensions.h
+            td= item.weight
+            td= item.quantity
+            td $ #{item.msrp}
+          td #{item.percentOff}%
+          td $ #{parseFloat(item.cost()).toFixed(2)}

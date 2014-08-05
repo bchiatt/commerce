@@ -1,10 +1,13 @@
 {
   "name": "commerce",
   "version": "0.0.0",
-  "description": "This is an inventory add/remove web app",
+  "description": "This is an item add/delete inventory web page.",
   "main": "app/index.js",
   "bin": {
     "coveralls": "./node_modules/coveralls/bin/coveralls.js"
+  },
+  "directories": {
+    "test": "test"
   },
   "scripts": {
     "test": "mocha test --recursive -R spec"
@@ -19,26 +22,30 @@
   "bugs": {
     "url": "https://github.com/bchiatt/commerce/issues"
   },
-  "homepage": "https://github.com/bchiatt/commerce"
+  "homepage": "https://github.com/bchiatt/commerce",
   "config": {
     "blanket": {
       "pattern": "/app/"
     }
   },
   "dependencies": {
-    "express": "^4.7.2",
     "body-parser": "^1.5.2",
+    "express": "^4.7.4",
+    "express-method-override": "0.0.3",
     "jade": "^1.5.0",
     "lodash": "^2.4.1",
     "mongodb": "^1.4.8",
-    "morgan": "^1.2.2",
+    "morgan": "^1.2.2"
   },
   "devDependencies": {
-    "mocha": "^1.21.3"
+    "blanket": "^1.1.6",
     "chai": "^1.9.1",
+    "coveralls": "^2.11.1",
     "grunt": "^0.4.5",
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-watch": "^0.6.1",
-    "jshint-stylish": "^0.4.0"
-  },
+    "jshint-stylish": "^0.4.0",
+    "mocha": "^1.21.3",
+    "mocha-lcov-reporter": "0.0.1"
+  }
 }
