@@ -1,7 +1,7 @@
 {
   "name": "commerce",
   "version": "0.0.0",
-  "description": "This is an item add/delete inventory web page.",
+  "description": "this is an inventory add/delte db web app",
   "main": "app/index.js",
   "directories": {
     "test": "test"
