@@ -1,22 +1,30 @@
-            td Length
-            td Width
-            td Height
-            td Weight
-            td Quantity
-            td MSRP
-            td Percent Off
-            td Actual Cost
-        tbody
-          tr(style='background: #{item.color}; color: gray')
-            td: a(href='/items/#{item._id}') #{item.name}
-            td= item.dimensions.l
-            td= item.dimensions.w
-            td= item.dimensions.h
-            td= item.weight
-            td= item.quantity
-            td $ #{item.msrp}
-            td #{item.percentOff}%
-            td $ #{parseFloat(item.cost()).toFixed(2)}
-      form(method='post', action='/items/#{item._id}')
-        input(value='delete', type='hidden', name='_method')
-        button(style='margin: 20px auto 0 auto') Delete from Database
+extends ../shared/template
+
+block content
+  div
+    table
+      thead
+        tr
+          td Name
+          td Length
+          td Width
+          td Height
+          td Weight
+          td Quantity
+          td MSRP
+          td Percent Off
+          td Actual Cost
+      tbody
+        tr(style='background: #{item.color}; color: gray')
+          td: a(href='/items/#{item._id}') #{item.name}
+          td= item.dimensions.l
+          td= item.dimensions.w
+          td= item.dimensions.h
+          td= item.weight
+          td= item.quantity
+          td $ #{item.msrp}
+          td #{item.percentOff}%
+          td $ #{parseFloat(item.cost()).toFixed(2)}
+    form(method='post', action='/items/#{item._id}')
+      input(value='delete', type='hidden', name='_method')
+      button(style='margin: 20px auto 0 auto') Delete from Database

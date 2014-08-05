@@ -18,7 +18,7 @@ module.exports = function(app, express){
 
   app.get('/items/new', items.init);
   app.get('/items/:id', items.show);
-  app.post('/items/:id/delete', items.destroy);
+  app.delete('/items/:id', items.destroy);
   app.get('/items', items.index);
   app.post('/items', items.create);
 
