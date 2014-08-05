@@ -26,7 +26,7 @@
   "config": {
     "blanket": {
       "pattern": "/app/"
-    },
+    }
   },
   "dependencies": {
     "body-parser": "^1.5.2",
