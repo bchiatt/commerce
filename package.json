@@ -3,15 +3,11 @@
   "version": "0.0.0",
   "description": "This is an item add/delete inventory web page.",
   "main": "app/index.js",
-  "bin": {
-    "coveralls": "./node_modules/coveralls/bin/coveralls.js"
-  },
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "mocha test --recursive -R spec"
-    "coveralls": "./node_modules/mocha/bin/mocha test --recursive -r blanket -R mocha-lcov-reporter"
   },
   "repository": {
     "type": "git",
@@ -23,11 +19,6 @@
     "url": "https://github.com/bchiatt/commerce/issues"
   },
   "homepage": "https://github.com/bchiatt/commerce",
-  "config": {
-    "blanket": {
-      "pattern": "/app/"
-    }
-  },
   "dependencies": {
     "body-parser": "^1.5.2",
     "express": "^4.7.4",
